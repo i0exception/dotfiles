@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/aniruddha/analytics/go/src/arb/format'
+let g:netrw_dirhist_2='/home/aniruddha/dotfiles/.vim'
