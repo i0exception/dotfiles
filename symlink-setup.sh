@@ -141,7 +141,7 @@ print_success() {
 # actual symlink stuff
 #
 
-FILES_TO_SYMLINK=".aliases .dircolors .exports .functions .inputrc .vimrc"
+FILES_TO_SYMLINK=".aliases .dircolors .exports .functions .inputrc .vim .vimrc"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
