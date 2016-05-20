@@ -7,3 +7,6 @@ export MANPAGER="less -X"
 # Prefer US English and use UTF-8
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
+
+export GOPATH=$HOME/go/:$HOME/analytics/go
+export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/.gotools/bin:$PATH:$HOME/bin
