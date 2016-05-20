@@ -25,13 +25,24 @@ install_golang() {
 install_vimgo() {
     cd ~/.vim/bundle
     [[ -d vim-go ]] || git clone https://github.com/fatih/vim-go.git
+    cd vim-go
+    git pull origin master
 }
 
 install_vim_ycm() {
     cd ~/.vim/bundle
     [[ -d YouCompleteMe ]] || git clone https://github.com/Valloric/YouCompleteMe.git
     cd YouCompleteMe
+    git pull origin master
     git submodule update --init --recursive
     ./install.py --gocode-completer
 }
 
+install_oh_my_zsh() {
+    cd ~/
+    [[ -d .oh-my-zsh ]] || git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+    cd ~/.oh-my-zsh
+    git pull origin master
+}
+
+install_oh_my_zsh
