@@ -1,4 +1,4 @@
-PACKAGES="g++ python python-dev dstat htop cmake tmux"
+PACKAGES="g++ python python-dev dstat htop cmake tmux fabric python-pip"
 GOLANG="https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz"
 GOLANG_ARTIFACT="go1.6.2.linux-amd64.tar.gz"
 
@@ -11,6 +11,8 @@ install_packages() {
     done
 }
 
+install_packages
+
 install_golang() {
     cd /tmp/
     wget --quiet -O $GOLANG_ARTIFACT $GOLANG
@@ -22,12 +24,16 @@ install_golang() {
     GOPATH=$HOME/.gotools /usr/local/go/bin/go get -u github.com/FiloSottile/gvt github.com/jteeuwen/go-bindata/... github.com/golang/lint/golint
 }
 
+install_golang
+
 install_vimgo() {
     cd ~/.vim/bundle
     [[ -d vim-go ]] || git clone https://github.com/fatih/vim-go.git
     cd vim-go
     git pull origin master
 }
+
+install_vimgo
 
 install_vim_ycm() {
     cd ~/.vim/bundle
@@ -37,6 +43,8 @@ install_vim_ycm() {
     git submodule update --init --recursive
     ./install.py --gocode-completer
 }
+
+install_vim_ycm
 
 install_oh_my_zsh() {
     cd ~/
