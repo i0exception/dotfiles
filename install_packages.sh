@@ -1,4 +1,4 @@
-PACKAGES="g++ python python-dev dstat htop cmake tmux fabric python-pip zsh"
+PACKAGES="g++ python python-dev dstat htop cmake tmux fabric python-pip zsh libboost-dev"
 GOLANG="https://storage.googleapis.com/golang/go1.6.2.linux-amd64.tar.gz"
 GOLANG_ARTIFACT="go1.6.2.linux-amd64.tar.gz"
 
