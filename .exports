@@ -8,5 +8,6 @@ export MANPAGER="less -X"
 export LC_ALL="en_US.UTF-8"
 export LANG="en_US"
 
-export GOPATH=$HOME/go/:$HOME/analytics/go
+export GOPATH=$HOME/go:/usr/local/go/:$HOME/analytics/go
+export GO15VENDOREXPERIMENT=1
 export PATH=/usr/local/go/bin:$HOME/go/bin:$HOME/.gotools/bin:$PATH:$HOME/bin
