@@ -23,6 +23,6 @@ alias v="vim"
 
 # File size
 alias fs="stat -f \"%z bytes\""
-function kshell {
-        kubectl exec -ti $@ env COLUMNS=$(tput cols) LINES=$(tput lines) TERM=$TERM /bin/bash
-}
+
+# kube
+alias kpods="kubectl get pods"
