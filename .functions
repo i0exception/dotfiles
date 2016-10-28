@@ -116,5 +116,9 @@ function klogs {
 
 function kscp {
     perm=$(stat -c "%a" $1)
-    cat $1 | kubectl exec -i $2 -c $3 -- bash -c "cat > $4 && chmod $perm $4"
+    ns=$5
+    if [ -z $ns ]; then
+        ns="default"
+    fi
+    cat $1 | kubectl --namespace "$ns" exec -i $2 -c $3 -- bash -c "cat > $4 && chmod $perm $4"
 }
