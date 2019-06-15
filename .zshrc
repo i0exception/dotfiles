@@ -6,7 +6,7 @@ for file in ~/.{extra,exports,aliases,functions}; do
 done
 unset file
 
-ZSH_THEME="cloud"
+# ZSH_THEME="miloshadzic"
 
 plugins=(git)
 

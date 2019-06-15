@@ -106,14 +106,6 @@ function _fab {
     COMPREPLY=($(compgen -W "${tags}" $cur))
 }
 
-function kshell {
-    kubectl exec -ti $@ env COLUMNS=$(tput cols) LINES=$(tput lines) TERM=$TERM /bin/bash
-}
-
-function klogs {
-    kubectl logs $@    
-}
-
 function kscp {
     perm=$(stat -c "%a" $1)
     ns=$5
